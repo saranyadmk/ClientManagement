@@ -25,7 +25,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Database\" />
+    <ProjectReference Include="..\ClientManagement.BusinessLogic\ClientManagement.BusinessLogic.csproj" />
+    <ProjectReference Include="..\ClientManagement.Models\ClientManagement.Models.csproj" />
   </ItemGroup>
 
 </Project>
