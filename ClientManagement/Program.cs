@@ -14,11 +14,11 @@ namespace ClientManagement
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
-            builder.Services.AddDbContext<ClientManagementContext>(options =>
+            builder.Services.AddDbContext<ClientDbContext>(options =>
             options.UseSqlServer(builder.Configuration.GetConnectionString("ClientDB")));
 
             builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
-                .AddEntityFrameworkStores<ClientManagementContext>()
+                .AddEntityFrameworkStores<ClientDbContext>()
                 .AddDefaultTokenProviders();
 
             builder.Services.AddAuthentication(options =>
@@ -42,9 +42,9 @@ namespace ClientManagement
                 });
 
             // Add services to the container.
-            builder.Services.AddTransient<ClientManagementContext>();
+            builder.Services.AddTransient<ClientDbContext>();
             builder.Services.AddTransient<IClientRepository, ClientRepository>();
-            builder.Services.AddTransient<ISecurityRepository, SecurityRepository>();
+            builder.Services.AddTransient<IAccountRepository, AccountRepository>();
             builder.Services.AddControllers().AddNewtonsoftJson();
 
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

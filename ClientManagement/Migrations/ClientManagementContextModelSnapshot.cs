@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace ClientManagement.Migrations
 {
-    [DbContext(typeof(ClientManagementContext))]
+    [DbContext(typeof(ClientDbContext))]
     partial class ClientManagementContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

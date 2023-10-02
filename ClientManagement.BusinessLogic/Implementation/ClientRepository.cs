@@ -13,10 +13,10 @@ namespace ClientManagement.Repository
 {
     public class ClientRepository : IClientRepository
     {
-        private readonly ClientManagementContext _context;
+        private readonly ClientDbContext _context;
         private readonly ICacheProvider _cacheProvider;
 
-        public ClientRepository(ClientManagementContext context, ICacheProvider cacheProvider)
+        public ClientRepository(ClientDbContext context, ICacheProvider cacheProvider)
         {
             _context = context;
             _cacheProvider = cacheProvider;

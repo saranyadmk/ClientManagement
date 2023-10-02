@@ -8,13 +8,13 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace ClientManagement.Database
 {
-    public partial class ClientManagementContext : IdentityDbContext<ApplicationUser>
+    public partial class ClientDbContext : IdentityDbContext<ApplicationUser>
     {
-        public ClientManagementContext()
+        public ClientDbContext()
         {
         }
 
-        public ClientManagementContext(DbContextOptions<ClientManagementContext> options)
+        public ClientDbContext(DbContextOptions<ClientDbContext> options)
             : base(options)
         {
         }

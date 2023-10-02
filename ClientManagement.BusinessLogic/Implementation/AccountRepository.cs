@@ -8,13 +8,13 @@ using Microsoft.Extensions.Configuration;
 
 namespace ClientManagement.Repository
 {
-    public class SecurityRepository : ISecurityRepository
+    public class AccountRepository : IAccountRepository
     {
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly IConfiguration _configuration;
 
-        public SecurityRepository(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, IConfiguration configuration)
+        public AccountRepository(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, IConfiguration configuration)
         {
             _userManager = userManager;
             _signInManager = signInManager;
